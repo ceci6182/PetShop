@@ -7,7 +7,7 @@ namespace Compulsory1.Petshop.DataAccess.Repositories
     public class OwnerRepository :IOwnerRepository
     {
         private FakeDB _fakeDb = new FakeDB();
-        public List<Owner> ReadPets()
+        public List<Owner> ReadOwners()
         {
            return _fakeDb.getOwners();
         }
@@ -19,12 +19,12 @@ namespace Compulsory1.Petshop.DataAccess.Repositories
 
         public void delete(Owner deleteOwner)
         {
-            throw new System.NotImplementedException();
+            _fakeDb.DeleteOwner(deleteOwner.Id);
         }
 
         public void edit(Owner oldOwner, Owner updateOwner)
         {
-            throw new System.NotImplementedException();
+            _fakeDb.EditOwner(oldOwner, updateOwner);
         }
     }
 }

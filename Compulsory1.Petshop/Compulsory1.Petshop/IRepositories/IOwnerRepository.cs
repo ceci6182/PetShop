@@ -6,7 +6,7 @@ namespace Compulsory1.Petshop.Core.IRepositories
 {
     public interface IOwnerRepository
     {
-        List<Owner> ReadPets();
+        List<Owner> ReadOwners();
 
         Owner Create(string firstname, string lastname, string address, string phoneNumber, string email);
         void delete(Owner deleteOwner);
