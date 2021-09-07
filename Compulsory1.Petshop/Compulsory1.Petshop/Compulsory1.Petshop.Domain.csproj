@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+        <RootNamespace>Compulsory1.Petshop.Core</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Compulsory1.Petshop.Core\Compulsory1.Petshop.Core.csproj" />
+    </ItemGroup>
+
+</Project>
