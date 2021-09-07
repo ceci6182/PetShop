@@ -12,6 +12,7 @@ namespace Compulsory1.Petshop.DataAccess
         
         private static int _petId = 1;
         private static int _petTypeId = 1;
+        private static int _ownerId = 1;
         private static List<Pet> _pets { get; set; } = new List<Pet>();
         private static List<PetType> _petTypes{ get; set; } = new List<PetType>();
         
@@ -51,6 +52,11 @@ namespace Compulsory1.Petshop.DataAccess
             return _petTypes;
         }
 
+        public List<Owner> getOwners()
+        {
+            return _owners;
+        }
+
         public Pet AddPet(string name, DateTime birthdate, DateTime solddate, string color, double price, PetType petType)
         {
             Pet pet = new Pet();
@@ -78,6 +84,21 @@ namespace Compulsory1.Petshop.DataAccess
             return petType;
         }
 
+        public Owner AddOwner(string firstname, string lastname, string address, string phoneNumber, string email)
+        {
+            Owner owner = new Owner();
+            owner.Id = _ownerId;
+            owner.FirstName = firstname;
+            owner.LastName = lastname;
+            owner.Address = address;
+            owner.PhoneNumber = phoneNumber;
+            owner.Email = email;
+            
+            _owners.Add(owner);
+            _ownerId++;
+            return owner;
+        }
+
 
         public void deletePet(int? deletePetId)
         {
@@ -85,6 +106,12 @@ namespace Compulsory1.Petshop.DataAccess
             
 
             _pets.Remove(deletePet);
+        }
+
+        public void DeleteOwner(int? deleteOwnerId)
+        {
+
+            _owners.Remove(getOwner(deleteOwnerId));
         }
 
         public void EditPet(Pet oldPet, Pet updatePet)
@@ -96,6 +123,16 @@ namespace Compulsory1.Petshop.DataAccess
             petToEdit.SoldDate = updatePet.SoldDate;
             petToEdit.Price = updatePet.Price;
             petToEdit.Color = updatePet.Color;
+        }
+
+        public void EditOwner(Owner oldOwner, Owner updateOwner)
+        {
+            Owner ownerToEdit = getOwner(oldOwner.Id);
+            ownerToEdit.FirstName = updateOwner.FirstName;
+            ownerToEdit.LastName = updateOwner.LastName;
+            ownerToEdit.Address = updateOwner.Address;
+            ownerToEdit.PhoneNumber = updateOwner.PhoneNumber;
+            ownerToEdit.Email = ownerToEdit.PhoneNumber;
         }
 
         public Pet getPet(int? id)
@@ -110,6 +147,20 @@ namespace Compulsory1.Petshop.DataAccess
             }
 
             return returnPet;
+        }
+        
+        public Owner getOwner(int? id)
+        {
+            Owner returnOwner = null;
+            foreach (var owner in _owners)
+            {
+                if (owner.Id == id)
+                {
+                    returnOwner = owner;
+                }
+            }
+
+            return returnOwner;
         }
     }
 }
