@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Compulsory1.Petshop.DataAccess.Repositories;
 using Compulsory1.Petshop.Domain.Models;
 
@@ -10,8 +11,11 @@ namespace Compulsory1.Petshop.DataAccess
         private static bool dataInit = false;
         
         private static int _petId = 1;
+        private static int _petTypeId = 1;
         private static List<Pet> _pets { get; set; } = new List<Pet>();
         private static List<PetType> _petTypes{ get; set; } = new List<PetType>();
+        
+        private static List<Owner> _owners{ get; set; } = new List<Owner>();
 
         public FakeDB()
         {
@@ -25,35 +29,16 @@ namespace Compulsory1.Petshop.DataAccess
 
         public void InitData()
         {
-            PetType goat = new PetType
-            {
-                Id = 1,
-                Name = "Goat"
-            };
-
-            PetType cat = new PetType
-            {
-                Id = 2,
-                Name = "Cat"
-            };
-
-            PetType dog = new PetType
-            {
-                Id = 3,
-                Name = "Dog"
-            };
-
-            _petTypes.Add(goat);
-            _petTypes.Add(cat);
-            _petTypes.Add(dog);
-
+            AddPetType("goat");
+            AddPetType("dog");
+            AddPetType("cat");
             
-            Add("Gertrud", DateTime.Now, DateTime.Today, "brown", 10.09, goat);
-            Add("Bob", DateTime.Parse("1/1/1"), DateTime.Parse("2/2/2"), "blue", 90.08, cat);
-            Add("Ole", DateTime.Parse("1/3/12"), DateTime.Parse("2/5/2"), "brown", 3.98, cat);
-            Add("Knud", DateTime.Parse("5/2/1"), DateTime.Parse("12/12/2"), "black", 4.08, cat);
-            Add("Gerda", DateTime.Parse("5/4/3"), DateTime.Parse("1/2/3"), "red", 5.85, dog);
-            Add("Fisk", DateTime.Parse("3/4/3"), DateTime.Parse("2/2/3"), "black", 7.33, dog);
+            AddPet("Gertrud", DateTime.Now, DateTime.Today, "brown", 10.09, _petTypes.ElementAt(1));
+            AddPet("Bob", DateTime.Parse("1/1/1"), DateTime.Parse("2/2/2"), "blue", 90.08, _petTypes.ElementAt(2));
+            AddPet("Ole", DateTime.Parse("1/3/12"), DateTime.Parse("2/5/2"), "brown", 3.98, _petTypes.ElementAt(2));
+            AddPet("Knud", DateTime.Parse("5/2/1"), DateTime.Parse("12/12/2"), "black", 4.08, _petTypes.ElementAt(1));
+            AddPet("Gerda", DateTime.Parse("5/4/3"), DateTime.Parse("1/2/3"), "red", 5.85, _petTypes.ElementAt(0));
+            AddPet("Fisk", DateTime.Parse("3/4/3"), DateTime.Parse("2/2/3"), "black", 7.33, _petTypes.ElementAt(1));
         }
 
         public List<Pet> getPets()
@@ -66,7 +51,7 @@ namespace Compulsory1.Petshop.DataAccess
             return _petTypes;
         }
 
-        public Pet Add(string name, DateTime birthdate, DateTime solddate, string color, double price, PetType petType)
+        public Pet AddPet(string name, DateTime birthdate, DateTime solddate, string color, double price, PetType petType)
         {
             Pet pet = new Pet();
             pet.Id = _petId;
@@ -80,6 +65,17 @@ namespace Compulsory1.Petshop.DataAccess
             _petId++;
             _pets.Add(pet);
             return pet;
+        }
+
+        public PetType AddPetType(string name)
+        {
+            PetType petType = new PetType();
+            petType.Id = _petTypeId;
+            petType.Name = name;
+            
+            _petTypes.Add(petType);
+            _petTypeId++;
+            return petType;
         }
 
 

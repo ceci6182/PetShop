@@ -17,7 +17,7 @@ namespace Compulsory1.Petshop.DataAccess.Repositories
         public Pet Create(string name, DateTime birthdate, DateTime solddate, string color, double price, PetType petType)
         {
 
-            return fakeDb.Add(name, birthdate, solddate, color, price, petType);
+            return fakeDb.AddPet(name, birthdate, solddate, color, price, petType);
         }
 
         public void delete(Pet deletePet)
