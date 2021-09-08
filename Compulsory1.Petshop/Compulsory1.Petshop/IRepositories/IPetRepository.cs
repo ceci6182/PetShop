@@ -9,7 +9,7 @@ namespace Compulsory1.Petshop.Core.IRepositories
         List<Pet> ReadPets();
 
         Pet Create(string name, DateTime birthdate, DateTime solddate, string color, double price, PetType petType);
-        void delete(Pet deletePet);
-        void editPet(Pet oldPet, Pet updatePet);
+        void delete(int? petId);
+        void editPet(int? oldPetId, Pet updatePet);
     }
 }

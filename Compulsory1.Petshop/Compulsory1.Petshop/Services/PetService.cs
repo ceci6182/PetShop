@@ -25,14 +25,14 @@ namespace Compulsory1.Petshop.Core.Services
             return _petRepo.Create(name, birthdate, solddate, color, price, petType);
         }
 
-        public void remowePet(Pet deletePet)
+        public void RemovePet(int? petId)
         {
-            _petRepo.delete(deletePet);
+            _petRepo.delete(petId);
         }
 
-        public void updatePet(Pet oldPet, Pet updatePet)
+        public void updatePet(int? oldPetId, Pet updatePet)
         {
-            _petRepo.editPet(oldPet, updatePet);
+            _petRepo.editPet(oldPetId, updatePet);
         }
     }
 }

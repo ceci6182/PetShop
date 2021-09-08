@@ -114,9 +114,9 @@ namespace Compulsory1.Petshop.DataAccess
             _owners.Remove(getOwner(deleteOwnerId));
         }
 
-        public void EditPet(Pet oldPet, Pet updatePet)
+        public void EditPet(int? oldPetId, Pet updatePet)
         {
-            Pet petToEdit = getPet(oldPet.Id);
+            Pet petToEdit = getPet(oldPetId);
             petToEdit.Name = updatePet.Name;
             petToEdit.PetType = updatePet.PetType;
             petToEdit.Birthdate = updatePet.Birthdate;

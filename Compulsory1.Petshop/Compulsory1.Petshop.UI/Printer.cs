@@ -332,7 +332,7 @@ namespace Compulsory1.Petshop.UI
             {
                 if (SelectAreYouSure())
                 {
-                    _petServices.remowePet(deletePet);
+                    _petServices.RemovePet(deletePet.Id);
                     Print(StringConstants.DeletePetDone);
                     
                 }
@@ -416,7 +416,7 @@ namespace Compulsory1.Petshop.UI
 
                    if (petUpdated)
                    {
-                       _petServices.updatePet(editPet, updatePet);
+                       _petServices.updatePet(editPet.Id, updatePet);
                        Print(StringConstants.EditPetSuccessful);
                    }
                }

@@ -44,15 +44,16 @@ namespace Compulsory1.Petshop.API.Controllers
 
 
         [HttpPut("{id}")]
-        public void Update()
+        public void Update(int id, [FromBody] Pet pet)
         {
-            
+            pet.Id = id;
+            _service.updatePet(id, pet);
         }
         
         [HttpDelete]
-        public void Remove(Pet pet)
+        public void Remove(int petId)
         {
-            _service.remowePet(pet);
+            _service.RemovePet(petId);
         }
     }
 }

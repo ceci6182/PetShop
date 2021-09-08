@@ -20,14 +20,14 @@ namespace Compulsory1.Petshop.DataAccess.Repositories
             return fakeDb.AddPet(name, birthdate, solddate, color, price, petType);
         }
 
-        public void delete(Pet deletePet)
+        public void delete(int? petId)
         {
-            fakeDb.deletePet(deletePet.Id);
+            fakeDb.deletePet(petId);
         }
 
-        public void editPet(Pet oldPet, Pet updatePet)
+        public void editPet(int? oldPetId, Pet updatePet)
         {
-            fakeDb.EditPet(oldPet, updatePet);
+            fakeDb.EditPet(oldPetId, updatePet);
         }
     }
 }

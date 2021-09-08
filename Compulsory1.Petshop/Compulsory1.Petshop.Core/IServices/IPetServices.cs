@@ -11,7 +11,7 @@ namespace Compulsory1.Petshop.Domain.IServices
         public Pet addPet(string name, DateTime birthdate, DateTime solddate, string color, double price,
             PetType petType);
 
-        void remowePet(Pet deletePet);
-        void updatePet(Pet oldPet, Pet updatePet);
+        void RemovePet(int? petId);
+        void updatePet(int? oldPetId, Pet updatePet);
     }
 }
