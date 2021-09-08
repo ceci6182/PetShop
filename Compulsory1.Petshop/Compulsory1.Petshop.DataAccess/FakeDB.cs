@@ -125,9 +125,9 @@ namespace Compulsory1.Petshop.DataAccess
             petToEdit.Color = updatePet.Color;
         }
 
-        public void EditOwner(int? oldOwnerId, Owner updateOwner)
+        public void EditOwner(int? oldOwnerID, Owner updateOwner)
         {
-            Owner ownerToEdit = getOwner(oldOwnerId);
+            Owner ownerToEdit = getOwner(oldOwnerID);
             ownerToEdit.FirstName = updateOwner.FirstName;
             ownerToEdit.LastName = updateOwner.LastName;
             ownerToEdit.Address = updateOwner.Address;

@@ -15,6 +15,7 @@ namespace Compulsory1.Petshop.Domain.Models
         public DateTime SoldDate{ get; set; }
         public string Color{ get; set; }    
         public double Price{ get; set; }
+        public Owner OldOwner { get; set; }
 
         public override string ToString()
         {
@@ -26,6 +27,11 @@ namespace Compulsory1.Petshop.Domain.Models
 
             returnString +=
                 $"Pet type = {PetType.Name}, name = {Name}, BirthDate = {Birthdate}, Sold Date = {SoldDate}, Color = {Color}, Price = {Price}";
+            if (OldOwner != null)
+            {
+                returnString += $"Old Owner = {OldOwner.GetFullName()}";
+            }
+            
             return returnString;
         }
     }

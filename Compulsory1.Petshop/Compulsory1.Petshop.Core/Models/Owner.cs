@@ -2,7 +2,7 @@ namespace Compulsory1.Petshop.Domain.Models
 {
     public class Owner
     {
-        public int Id
+        public int? Id
         {
             get;
             set;
@@ -37,6 +37,23 @@ namespace Compulsory1.Petshop.Domain.Models
             get;
             set;
         }
-        
+
+        public override string ToString()
+        {
+            string returnString= "";
+            if (Id.HasValue)
+            {
+                returnString += $"Id = {Id}";
+            }
+
+            returnString +=
+                $"Name = {FirstName} {LastName}, Phone = {PhoneNumber}, Address = {Address}, Email = {Email}";
+            return returnString;
+        }
+
+        public string GetFullName()
+        {
+            return $"{FirstName} {LastName}";
+        }
     }
 }
