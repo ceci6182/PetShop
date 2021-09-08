@@ -9,7 +9,7 @@ namespace Compulsory1.Petshop.Domain.IServices
 
         public Owner AddOwner(string firstname, string lastname, string address, string phoneNumber, string email);
 
-        void RemoveOwner (Owner  deleteOwner );
-        void UpdateOwner (Owner  oldOwner , Owner  updateOwner );
+        void RemoveOwner(int? deleteOwner);
+        void UpdateOwner (int? oldOwnerId, Owner  updateOwner );
     }
 }

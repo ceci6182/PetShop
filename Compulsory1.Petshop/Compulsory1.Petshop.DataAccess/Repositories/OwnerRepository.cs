@@ -17,14 +17,14 @@ namespace Compulsory1.Petshop.DataAccess.Repositories
             return _fakeDb.AddOwner(firstname, lastname, address, phoneNumber, email);
         }
 
-        public void delete(Owner deleteOwner)
+        public void delete(int? deleteOwnerId)
         {
-            _fakeDb.DeleteOwner(deleteOwner.Id);
+            _fakeDb.DeleteOwner(deleteOwnerId);
         }
 
-        public void edit(Owner oldOwner, Owner updateOwner)
+        public void edit(int? oldOwnerId, Owner updateOwner)
         {
-            _fakeDb.EditOwner(oldOwner, updateOwner);
+            _fakeDb.EditOwner(oldOwnerId, updateOwner);
         }
     }
 }

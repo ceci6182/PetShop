@@ -24,14 +24,14 @@ namespace Compulsory1.Petshop.Core.Services
             return _ownerRepo.Create(firstname, lastname, address, phoneNumber, email);
         }
 
-        public void RemoveOwner(Owner deleteOwner)
+        public void RemoveOwner(int? deleteOwner)
         {
             _ownerRepo.delete(deleteOwner);
         }
 
-        public void UpdateOwner(Owner oldOwner, Owner updateOwner)
+        public void UpdateOwner(int? oldOwnerId, Owner updateOwner)
         {
-            _ownerRepo.edit(oldOwner, updateOwner);
+            _ownerRepo.edit(oldOwnerId, updateOwner);
         }
     }
 }

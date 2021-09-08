@@ -9,7 +9,7 @@ namespace Compulsory1.Petshop.Core.IRepositories
         List<Owner> ReadOwners();
 
         Owner Create(string firstname, string lastname, string address, string phoneNumber, string email);
-        void delete(Owner deleteOwner);
-        void edit(Owner oldOwner, Owner updateOwner);
+        void delete(int? deleteOwnerId);
+        void edit(int? oldOwnerID, Owner updateOwner);
     }
 }
