@@ -6,10 +6,12 @@ namespace Compulsory1.Petshop.Core.IRepositories
 {
     public interface IPetRepository
     {
-        List<Pet> ReadPets();
+        IEnumerable<Pet> ReadAll();
 
         Pet Create(string name, DateTime birthdate, DateTime solddate, string color, double price, PetType petType);
         void delete(int? petId);
         void editPet(int? oldPetId, Pet updatePet);
+
+        Pet ReadById(int id);
     }
 }

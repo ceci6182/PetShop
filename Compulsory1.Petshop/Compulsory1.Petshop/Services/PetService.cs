@@ -14,9 +14,9 @@ namespace Compulsory1.Petshop.Core.Services
         {
             _petRepo = petRepo;
         }
-        public List<Pet> GetPets()
+        public IEnumerable<Pet> GetPets()
         {
-            return _petRepo.ReadPets();
+            return _petRepo.ReadAll();
         }
 
         public Pet addPet(string name, DateTime birthdate, DateTime solddate, string color, double price,

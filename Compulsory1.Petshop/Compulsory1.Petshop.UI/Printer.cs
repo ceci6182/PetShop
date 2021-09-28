@@ -43,8 +43,8 @@ namespace Compulsory1.Petshop.UI
         
         public void PrintAllPets()
         {
-            List<Pet> allpets = _petServices.GetPets();
-            if (allpets.Count == 0)
+            IEnumerable<Pet> allpets = _petServices.GetPets();
+            if (allpets.Count() == 0)
             {
                 Print(StringConstants.AllPetsEmpty);
             }

@@ -9,4 +9,9 @@
       <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.10" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\Compulsory1.Petshop.Core\Compulsory1.Petshop.Core.csproj" />
+      <ProjectReference Include="..\Compulsory1.Petshop\Compulsory1.Petshop.Domain.csproj" />
+    </ItemGroup>
+
 </Project>

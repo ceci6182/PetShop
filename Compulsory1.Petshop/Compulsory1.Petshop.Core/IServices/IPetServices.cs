@@ -6,7 +6,7 @@ namespace Compulsory1.Petshop.Domain.IServices
 {
     public interface IPetServices
     {
-        List<Pet> GetPets();
+        IEnumerable<Pet> GetPets();
 
         public Pet addPet(string name, DateTime birthdate, DateTime solddate, string color, double price,
             PetType petType);
