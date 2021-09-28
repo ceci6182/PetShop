@@ -58,7 +58,7 @@ namespace Compulsory1.Petshop.UI
         }
         private void PrintPetTypes()
         {
-            List<PetType> petTypes = _petTypeService.AllPetTypes();
+            IEnumerable<PetType> petTypes = _petTypeService.AllPetTypes();
             foreach (PetType petType in petTypes)
             {
                 Print(petType.ToString());

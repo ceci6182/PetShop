@@ -5,6 +5,6 @@ namespace Compulsory1.Petshop.Domain.IServices
 {
     public interface IPetTypeService
     {
-        List<PetType> AllPetTypes();
+        IEnumerable<PetType> AllPetTypes();
     }
 }

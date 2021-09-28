@@ -15,7 +15,7 @@ namespace Compulsory1.Petshop.Core.Services
             _petTypeRepository = petTypeRepository;
         }
         
-        public List<PetType> AllPetTypes()
+        public IEnumerable<PetType> AllPetTypes()
         {
            return _petTypeRepository.readPetTypes();
         }

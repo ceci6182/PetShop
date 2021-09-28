@@ -12,6 +12,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Compulsory1.Petshop.DataAccess\Compulsory1.Petshop.DataAccess.csproj" />
+      <ProjectReference Include="..\Compulsory1.Petshop.Infrastructure.Data\Compulsory1.Petshop.Infrastructure.Data.csproj" />
       <ProjectReference Include="..\Compulsory1.Petshop\Compulsory1.Petshop.Domain.csproj" />
     </ItemGroup>
 

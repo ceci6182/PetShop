@@ -8,9 +8,13 @@
     <ItemGroup>
       <ProjectReference Include="..\Compulsory1.Petshop.Core\Compulsory1.Petshop.Core.csproj" />
       <ProjectReference Include="..\Compulsory1.Petshop.DataAccess\Compulsory1.Petshop.DataAccess.csproj" />
+      <ProjectReference Include="..\Compulsory1.Petshop.Infrastructure.Data\Compulsory1.Petshop.Infrastructure.Data.csproj" />
     </ItemGroup>
 
     <ItemGroup>
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.10" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="5.0.10" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.10" />
       <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0-preview.7.21377.19" />
     </ItemGroup>
 

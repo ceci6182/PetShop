@@ -16,7 +16,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Compulsory1.Petshop.DataAcc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Compulsory1.Petshop.API", "Compulsory1.Petshop.API\Compulsory1.Petshop.API.csproj", "{463D851C-27DF-4F5E-ACA5-1DC1583695C5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Compulsory1.Petshop.Infrastructure.Data", "Compulsory1.Petshop.Infrastructure.Data\Compulsory1.Petshop.Infrastructure.Data.csproj", "{D291D593-87AA-4987-B3E5-BDE2FB53ADAC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Compulsory1.Petshop.Infrastructure.Data", "Compulsory1.Petshop.Infrastructure.Data\Compulsory1.Petshop.Infrastructure.Data.csproj", "{1818821C-6BA8-44F3-87DD-30E2C7F05244}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -44,10 +44,10 @@ Global
 		{463D851C-27DF-4F5E-ACA5-1DC1583695C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{463D851C-27DF-4F5E-ACA5-1DC1583695C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{463D851C-27DF-4F5E-ACA5-1DC1583695C5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D291D593-87AA-4987-B3E5-BDE2FB53ADAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D291D593-87AA-4987-B3E5-BDE2FB53ADAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D291D593-87AA-4987-B3E5-BDE2FB53ADAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D291D593-87AA-4987-B3E5-BDE2FB53ADAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1818821C-6BA8-44F3-87DD-30E2C7F05244}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1818821C-6BA8-44F3-87DD-30E2C7F05244}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1818821C-6BA8-44F3-87DD-30E2C7F05244}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1818821C-6BA8-44F3-87DD-30E2C7F05244}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{C7BE5DC7-E5D2-4A7F-AFF5-6897AEB3D285} = {6354A6DA-0B75-487B-9D75-BCB92F5FEC72}
@@ -55,6 +55,6 @@ Global
 		{230B1568-0AB2-4506-8473-0C4B1A19CF81} = {B4E8EBF5-0C8C-4603-BD24-F215069533CB}
 		{6B9A5A99-8C63-4328-99E2-7F5A9CE43768} = {13C3DA2A-9FAA-454F-8EC9-B0DC27078432}
 		{463D851C-27DF-4F5E-ACA5-1DC1583695C5} = {6354A6DA-0B75-487B-9D75-BCB92F5FEC72}
-		{D291D593-87AA-4987-B3E5-BDE2FB53ADAC} = {13C3DA2A-9FAA-454F-8EC9-B0DC27078432}
+		{1818821C-6BA8-44F3-87DD-30E2C7F05244} = {13C3DA2A-9FAA-454F-8EC9-B0DC27078432}
 	EndGlobalSection
 EndGlobal

@@ -59,15 +59,17 @@ namespace Compulsory1.Petshop.DataAccess
 
         public Pet AddPet(string name, DateTime birthdate, DateTime solddate, string color, double price, PetType petType)
         {
-            Pet pet = new Pet();
-            pet.Id = _petId;
-            pet.Name = name;
-            pet.Birthdate = birthdate;
-            pet.SoldDate = solddate;
-            pet.Color = color;
-            pet.Price = price;
-            pet.PetType = petType;
-            
+            Pet pet = new Pet
+            {
+                Id = _petId,
+                Name = name,
+                Birthdate = birthdate,
+                SoldDate = solddate,
+                Color = color,
+                Price = price,
+                PetType = petType
+            };
+
             _petId++;
             _pets.Add(pet);
             return pet;

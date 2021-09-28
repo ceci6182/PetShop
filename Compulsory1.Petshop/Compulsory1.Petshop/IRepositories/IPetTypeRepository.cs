@@ -5,6 +5,6 @@ namespace Compulsory1.Petshop.Core.IRepositories
 {
     public interface IPetTypeRepository
     {
-        List<PetType> readPetTypes();
+        IEnumerable<PetType> readPetTypes();
     }
 }

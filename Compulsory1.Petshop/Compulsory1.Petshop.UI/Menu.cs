@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using Compulsory1.Petshop.Core.IRepositories;
 using Compulsory1.Petshop.Core.Services;
-using Compulsory1.Petshop.DataAccess;
-using Compulsory1.Petshop.DataAccess.Repositories;
 using Compulsory1.Petshop.Domain.IServices;
+using Compulsory1.Petshop.Infrastructure.Data;
+using Compulsory1.Petshop.Infrastructure.Data.Repositories;
 using Compulsory1.Petshop.UI.MenuItems;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using StarterWeek.VideoMenu;
 
@@ -19,6 +20,9 @@ namespace Compulsory1.Petshop.UI
         {
 
             var serviceCollection = new ServiceCollection();
+            
+            serviceCollection.AddDbContext<PetshopContext>(opt => opt.UseInMemoryDatabase("ThaDB"));
+            
             serviceCollection.AddScoped<IPetRepository, PetRepository>();
             serviceCollection.AddScoped<IPetTypeRepository, PetTypeRepository>();
             serviceCollection.AddScoped<IPetServices, PetService>();

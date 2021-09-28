@@ -22,7 +22,18 @@ namespace Compulsory1.Petshop.Infrastructure.Data.Repositories
 
         public Pet Create(string name, DateTime birthdate, DateTime solddate, string color, double price, PetType petType)
         {
-            throw new NotImplementedException();
+            Pet pet = new Pet
+            {
+                Name = name,
+                Birthdate = birthdate,
+                SoldDate = solddate,
+                Color = color,
+                Price = price,
+                PetType = petType
+            };
+            Pet newPet = _ctx.Pets.Add(pet).Entity;
+            _ctx.SaveChanges();
+            return newPet;
         }
 
         public void delete(int? petId)

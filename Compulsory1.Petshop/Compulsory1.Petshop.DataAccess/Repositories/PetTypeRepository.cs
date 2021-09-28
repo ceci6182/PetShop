@@ -7,7 +7,7 @@ namespace Compulsory1.Petshop.DataAccess.Repositories
     public class PetTypeRepository : IPetTypeRepository
     {
         FakeDB fakeDb = new FakeDB();
-        public List<PetType> readPetTypes()
+        public IEnumerable<PetType> readPetTypes()
         {
             return fakeDb.getPetTypes();
         }

@@ -6,9 +6,16 @@ namespace Compulsory1.Petshop.Infrastructure.Data.Repositories
 {
     public class PetTypeRepository : IPetTypeRepository
     {
-        public List<PetType> readPetTypes()
+        
+        readonly PetshopContext _ctx;
+
+        public PetTypeRepository(PetshopContext ctx)
         {
-            throw new System.NotImplementedException();
+            _ctx = ctx;
+        }
+        public IEnumerable<PetType> readPetTypes()
+        {
+            return _ctx.PetTypes;
         }
     }
 }
