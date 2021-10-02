@@ -16,4 +16,10 @@
       <ProjectReference Include="..\Compulsory1.Petshop\Compulsory1.Petshop.Domain.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Reference Include="Microsoft.EntityFrameworkCore.InMemory, Version=5.0.10.0, Culture=neutral, PublicKeyToken=adb9793829ddae60">
+        <HintPath>..\..\..\..\..\..\..\..\..\.nuget\packages\microsoft.entityframeworkcore.inmemory\5.0.10\lib\netstandard2.1\Microsoft.EntityFrameworkCore.InMemory.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
 </Project>

@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Compulsory1.Petshop.Domain.IServices;
 using Compulsory1.Petshop.Domain.Models;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Compulsory1.Petshop.API.Controllers
@@ -19,6 +14,7 @@ namespace Compulsory1.Petshop.API.Controllers
         {
             _service = _petService;
         }
+        
 
         [HttpPost]
         public ActionResult<Pet> Create([FromBody] Pet pet)
@@ -26,6 +22,7 @@ namespace Compulsory1.Petshop.API.Controllers
             var createdPet = _service.addPet(pet.Name, pet.Birthdate, pet.SoldDate, pet.Color, pet.Price, pet.PetType);
             return Created($"https://localhost/api/pets/{createdPet.Id}",createdPet);
         }
+        
 
         [HttpGet]
         public ActionResult<List<Pet>> GetAll()
@@ -33,14 +30,14 @@ namespace Compulsory1.Petshop.API.Controllers
             return Ok(_service.GetPets());
         }
 
-        /*
+        
         [HttpGet("{id}")]
         public ActionResult<Pet> GetById(int id)
         {
-            Pet pet = _service.GetPetFromId(id);
+            Pet pet = _service.FindPetById(id);
             return Ok(pet);
         }
-        */
+        
 
 
         [HttpPut("{id}")]

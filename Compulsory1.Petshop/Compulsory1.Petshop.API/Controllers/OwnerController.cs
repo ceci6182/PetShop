@@ -1,9 +1,6 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Compulsory1.Petshop.Domain.IServices;
 using Compulsory1.Petshop.Domain.Models;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Compulsory1.Petshop.API.Controllers

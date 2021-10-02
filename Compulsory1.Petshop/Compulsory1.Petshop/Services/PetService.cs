@@ -34,5 +34,10 @@ namespace Compulsory1.Petshop.Core.Services
         {
             _petRepo.editPet(oldPetId, updatePet);
         }
+
+        public Pet FindPetById(int id)
+        {
+            return _petRepo.ReadById(id);
+        }
     }
 }

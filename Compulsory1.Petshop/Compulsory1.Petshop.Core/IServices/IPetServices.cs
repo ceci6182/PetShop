@@ -13,5 +13,7 @@ namespace Compulsory1.Petshop.Domain.IServices
 
         void RemovePet(int? petId);
         void updatePet(int? oldPetId, Pet updatePet);
+
+        Pet FindPetById(int id);
     }
 }
